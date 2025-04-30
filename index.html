@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html>
+<head>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Hahmlet:wght@100..900&family=Kulim+Park:wght@700&display=swap" rel="stylesheet">
+	<style>
+		li,h1,h2,h3,h4,h6{font-family: "Hahmlet", serif;
+			font-optical-sizing: auto;
+			font-weight: 600;
+			font-style: normal;
+			color: white;
+		word-break: keep-all;}
+		header{font-family: "Kulim Park", sans-serif;
+  			font-weight: 700;
+			font-style: normal;
+			font-size: xx-large;
+			color: white;
+			word-break: keep-all;}
+		body{background: black; margin: 0;}
+		a{color: white; text-decoration: none;}
+		menu li a:hover{color: grey; font-weight: bold;}
+		.wrap{width: 1600px; margin: auto;}
+		.wrap2{width: 900px; margin: auto; position: relative;}
+		.wrap3{width: 1200px; margin: auto; text-align: center;}
+		.wrap4{margin: auto; text-align: center;}
+		.wrap2 img{border-radius: 10%;}
+		nav{background: transparent; padding: 20px; position: fixed;}
+		.menu{text-align: center; margin: 0;}
+		li{list-style-type: none;}/*점 없애기*/
+		.logo{padding-left: 20px;}
+		.logo img {display: block; height: 80%;}
+		section{padding-top: 400px; padding-bottom: 400px;}
+		.menu li a{text-decoration: none;
+		            color: white;
+		            padding: 10px;
+		            display: inline-block; z-index: 1000;}
+		.menu li a:hover{color: palevioletred; font-size: 20px; transition: 0.3s ease;}
+		.fixednav{position: fixed; top: 0; left: 0; right: 0; width: 100%; padding: 20px 20px;}
+		.flex{display: flex; justify-content: space-between;}
+		.fixed{width: 100vw; margin: 0; z-index: 10; position: fixed; bottom: 0;}
+		.fixed img {
+            width: 100%;margin: auto;
+            height: auto;
+            display: block;}
+        .container{display: grid; grid-template-columns: 600px 540px 400px; grid-template-rows: 50px 200px;
+			justify-content: space-between; align-items	: center; row-gap: 50px; column-gap: 5px;}  
+		.item1{grid-row-start: 1; grid-row-end: 4;}
+		.item2{grid-column-start: 2; grid-column-end: 3;}
+		.flex2{display: flex; width: 600px; margin: auto;}
+		.flex3{display: flex; width: 600px; padding-left: 1000px;}
+		.flex3 img{display: flex; height: 30px; padding-bottom: 5px; padding-top: 5px;}
+		.txrignt{text-align: right;}
+		.fit{object-fit: cover;}
+		.full img{width: 99vw;}
+		.full{text-align: center;}
+		.h1px{width: 800px; text-align: center; margin: auto;}
+		.left{width: 1000px; text-align: left; margin: auto;}
+		.left2{width: 800px; text-align: left; padding-right: 400px;}
+		.right{width: 800px; text-align: center; padding-left: 400px;}
+		.left3 img{width: 800px; padding: 20px;}
+		.buttons img{width: 100px;}
+		.pd25{padding-bottom: 150px; padding-top: 50px;}
+		.pdabt{padding-bottom: 150px; padding-top: 150px;}
+		.pdright{padding-right: 400px;}
+		.pdabt img{width: 50%;}
+		.pdtop50{padding-top: 50px;}
+		.gl{width: 1200px; text-align: left}
+		.gl img{padding-bottom: 50px;}
+		.gm{width: 1200px; text-align: center}
+		.gm img{padding-bottom: 50px;}
+		.gr{width: 1200px; text-align: right}
+		.gr img{padding-bottom: 50px;}
+		.pgblack{color: black; width: 600px;}
+		.bg1{background: url(perfume5.png); background-size: 100vw;background-attachment: fixed; background-repeat: no-repeat;}
+		.bg1 img{display: flex;}
+		.bg2{background: url(gogi.png); background-size: 100vw;background-attachment: fixed; background-repeat: no-repeat;}
+		.bg3{background: url(perfume6.png); background-size: 100vw;background-attachment: fixed; background-repeat: no-repeat;}
+		.bg3 h3{text-align: right; background-color: white; padding: 20px;}
+		.bg4{background: url(perfume3.png);background-size: 100vw;background-attachment: fixed; background-repeat: no-repeat; text-align: center;}
+		.notice {
+        text-align: center; margin-top: 20px;/* Add spacing between button1.png and notice.png */
+    }
+    .notice img {
+        max-width: 50%;} /* Ensure the image scales properly */
+
+		.buy-button {
+        background: white;
+        color: black;
+        border: none;
+        border-radius: 30px;
+        padding: 15px;
+        font-size: 20px;
+        font-weight: bold;
+        cursor: pointer;
+        font-family: Hahmlet;
+        transition: background-color 0.3s ease; /* Add a smooth transition effect */
+    }
+
+    .wrap2 img {
+        transition: transform 0.3s ease; /* Smooth transition for the filter effect */
+    }
+
+    .wrap2 img:hover {
+		transform: scale(1.2);filter: brightness(0.7) sepia(1) hue-rotate(-50deg) saturate(5); /* Blend pale violet red */
+    }
+
+    .wrap3 img {
+        transition: transform 0.3s ease; position: relative;} /* Smooth transition for scaling */
+
+
+    .wrap3 img:hover {
+        transform: scale(1.1); /* Enlarge the image to 1.2 times its original size */
+    }
+
+    .buy-button:hover {
+        background-color: palevioletred; /* Change the background color to red */
+        color: white; /* Change the text color to white for better contrast */
+    }
+
+	.scroll-container {
+        width: 100%; /* Full width of the container */
+        overflow: hidden; /* Hide overflowing content */
+        position: relative; /* Establish stacking context */
+    }
+
+    .scroll-content {
+		padding-top: 100px;
+        display: flex; /* Arrange images in a row */
+        gap: 20px; /* Add spacing between images */
+        animation: scroll-horizontal 25s linear infinite; /* Infinite scrolling animation */
+    }
+
+    .scroll-content img {
+		border-radius: 5%;
+		filter: grayscale(100);
+        width: 500px; /* Set a fixed width for the images */
+        height: 300px; /* Set a fixed height for the images */
+        object-fit: cover; /* Ensure the images are properly scaled */
+    }
+
+    @keyframes scroll-horizontal {
+        0% {
+            transform: translateX(0); /* Start at the initial position */
+        }
+        100% {
+            transform: translateX(-100%); /* Move left by 100% of the container width */
+        }
+    }
+
+	.image{transition: transform 2s ease;  animation: rotateAndChange 5s infinite; /* Infinite animation */}
+	.image:hover{ transform: rotateY(360deg); animation-play-state: paused; /* Pause animation on hover */
+    }
+
+	</style>
+	<title>고깃집 삼겹살구이가 향으로?! Perfume De Gogijip</title>
+</head>
+<body id="top">
+	<nav style="z-index: 1000;">
+	<div class="fixednav wrap flex" div style="margin-right: 0;">
+		<div class="logo">
+			<a href="#top"><img src="pdglogo.png" alt="Logo" style="margin: auto;"></a>
+		</div>
+	<ul class="menu flex"><!-- ol(숫자) ul(점) -->
+      <li><a href="#about">About PDG</a></li>
+      <li><a href="#scent">Scent</a></li>
+      <li><a href="#recommendation">Recommendation</a></li> 
+    </ul>
+  </nav>
+  <section class="full pd25 pdtop50" id="main">
+	<h2 style="padding-top: 30px;">고깃집의 그 삼겹살 향을 당신에게</h2>
+	<img src="perfume1.png" image style="padding-top: 10px;">
+	&nbsp;
+	<h2 style="color: palevioletred;">39,900원부터</h2>
+	<h4>30ml 기준</h4>
+	&nbsp;
+	&nbsp;
+	&nbsp;
+	<h2 class="h1px" style="padding-bottom: 40px;">먹어도 먹어도 질리지 않는 삼겹살은 항상 배신을 하지 않죠. 식욕을 자극하는 돼지고기 굽는 향을 맡다가
+		문득 이런 생각 해보신 적 있나요? 아, 이거 향수로 만들어서 계속 맡고싶다! 걱정 마세요, 그 생각 여러분만 하고있던 것이
+		아니랍니다! 이제 Perfume De Gogijip이 제안하는 오마카세급 완벽한 삼겹정식 향으로 24시간
+		고깃집에 있는 듯한 분위기를 즐겨보세요!</h2>
+		&nbsp;&nbsp;&nbsp;
+	    <button class="buy-button">구매하기</button>
+  </section>
+  <section class="notice pd25">
+	<img src="notice.png">
+  </section>
+  <section class="bg1" id="about">
+	<div class="wrap left2">
+		<h1 class="pgblack flex2">About PDG</h1>
+			&nbsp;
+		<h3 class="flex2 pgblack">
+			지글거리는 소리와 함께 피어 오르던 황금빛 풍미. 코 끝을 간지럽히던 매혹적인 스모키함. 지인들과, 가족들과, 때로는 혼자서 즐기던 행복했던 식사의 순간들. 그 모든 기억을 향기로 담아내고 싶었습니다.
+			익숙함의 경계를 넘어선 대담한 시도를 이 한 병에. 당신의 개성을 가장 우아하게 드러낼, 유일무이한 시그니처 향입니다.
+		</h3>
+		    &nbsp;
+		<h3 class="flex2 pgblack">
+			향수는 단순한 향기가 아닙니다. 그것은 당신의 개성을 표현하는 예술입니다. Perfume De Gogijip은 당신의 매력을 한층 더 돋보이게 해줄 것입니다. 고깃집의 향기를 담은 이 특별한 향수로, 당신의 존재감을 더욱 빛내보세요.
+		</h3>
+	</div>
+	<div class="scroll-container">
+		<div class="scroll-content">
+			<img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExbGE5emVxbWY1ZHhibmRyeDc4b3ZmZHdsdnY2M3IyY2hudGNjenU1byZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/l1KsKeN8PUEtWPCBa/giphy.gif" alt="GIF 1">
+			<img src="https://media.giphy.com/media/l1KsHehngxNJeFcl2/giphy.gif?cid=ecf05e47nxw4fugmy192hs5u9yvtfq0pysdydpiel5lhtkz5&ep=v1_gifs_related&rid=giphy.gif&ct=g" alt="GIF 2">
+			<img src="https://media.giphy.com/media/l1AsE6k2pLh7rsdcQ/giphy.gif?cid=ecf05e47zow4cnq3uw5oc9mdhaf3ieypu6hj461sebn8pj7i&ep=v1_gifs_related&rid=giphy.gif&ct=g" alt="GIF 3">
+			<!-- Duplicate images for seamless scrolling -->
+			<img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExbGE5emVxbWY1ZHhibmRyeDc4b3ZmZHdsdnY2M3IyY2hudGNjenU1byZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/l1KsKeN8PUEtWPCBa/giphy.gif" alt="GIF 1">
+			<img src="https://media.giphy.com/media/l1KsHehngxNJeFcl2/giphy.gif?cid=ecf05e47nxw4fugmy192hs5u9yvtfq0pysdydpiel5lhtkz5&ep=v1_gifs_related&rid=giphy.gif&ct=g" alt="GIF 2">
+			<img src="https://media.giphy.com/media/l1AsE6k2pLh7rsdcQ/giphy.gif?cid=ecf05e47zow4cnq3uw5oc9mdhaf3ieypu6hj461sebn8pj7i&ep=v1_gifs_related&rid=giphy.gif&ct=g" alt="GIF 3">
+			<img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExbGE5emVxbWY1ZHhibmRyeDc4b3ZmZHdsdnY2M3IyY2hudGNjenU1byZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/l1KsKeN8PUEtWPCBa/giphy.gif" alt="GIF 1">
+			<img src="https://media.giphy.com/media/l1KsHehngxNJeFcl2/giphy.gif?cid=ecf05e47nxw4fugmy192hs5u9yvtfq0pysdydpiel5lhtkz5&ep=v1_gifs_related&rid=giphy.gif&ct=g" alt="GIF 2">
+			<img src="https://media.giphy.com/media/l1AsE6k2pLh7rsdcQ/giphy.gif?cid=ecf05e47zow4cnq3uw5oc9mdhaf3ieypu6hj461sebn8pj7i&ep=v1_gifs_related&rid=giphy.gif&ct=g" alt="GIF 3">
+			<img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExbGE5emVxbWY1ZHhibmRyeDc4b3ZmZHdsdnY2M3IyY2hudGNjenU1byZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/l1KsKeN8PUEtWPCBa/giphy.gif" alt="GIF 1">
+			<img src="https://media.giphy.com/media/l1KsHehngxNJeFcl2/giphy.gif?cid=ecf05e47nxw4fugmy192hs5u9yvtfq0pysdydpiel5lhtkz5&ep=v1_gifs_related&rid=giphy.gif&ct=g" alt="GIF 2">
+		</div>
+	</div>
+	</div>
+  </section>
+  <section>
+	<h4 style="text-align: center;">
+		소비자들의 의견</h4>
+	<h1 style="text-align: center; color: palevioletred;">
+		이렇게나! 삼겹살의 향을 항상 품고싶은 분들이 많습니다.
+	</h1>
+	<div class="flex pdtop50 wrap3">
+		<img src="Group6.png" style="width:375px;">
+		<img src="Group7.png" style="width:375px;">
+		<img src="Group8.png" style="width:375px;">
+	</div>
+  </section>
+  <section class="bg2">
+	<h3 style="text-align: center;">
+		Creative Director of Perfume De Gogijip
+	</h3>
+	<h1 style="text-align: center;">
+		Granny. YorkGaeng
+		&nbsp;
+		욕쟁이 할머니
+	</h1>
+	<div class="notice">
+		<img src="granny.png" width=:50%>
+	</div>
+	<h2 style="text-align: center;">
+		"야 이 옘X할 썩을 놈들아 빨리 외상값 안 갚아?!"
+	</h2>
+	<h3 class=h1px>
+		5공 이래 을지로 조흥은행 옆집에서 삼겹살집을 운영해온 욕쟁이 할머니, 그녀의 거칠지만 정감있는 화법과 푸짐한 손은 우리네 가장들을 항상 위로해왔습니다. 현재 은퇴 후, Perfume De Gogijip의 크리에이티브 디렉터로서 향수의 향을 직접 개발하고 있습니다. 그녀의 손길이 닿은 향수는 그 어떤 향수보다도 진정한 고깃집의 향을 담고 있습니다.
+	</h3>
+  </section>
+  <section class="wrap4 bg3" id="scent">
+		<h1 style="color: white; padding-bottom: 100px;">Scent</h1>
+		<img src="note.png" style="width:70%; padding-bottom: 500px;">
+		<img src="mapping.png" style="width:70%;">
+	</section>
+  <section class="bg4" id="recommendation">
+	<h1 style="color: white; padding-bottom: 100px;">Recommendation</h1>
+	<div class="wrap gm flex">
+		<img src="Group9.png" style="width: 350px;" class="image">
+		<img src="Group10.png" style="width: 350px;" class="image">
+		<img src="Group11.png" style="width: 350px;" class="image">
+	</div>
+	<div class="wrap gm flex">
+		<h3 style="width: 350px; text-align: center; color: white;">말도 안되는 해외의
+			억소리 나는 한식 가격!
+			
+			하지만 향수병에 걸려 정말
+			한식이 먹고 싶은 당신에게
+			적극 추천합니다! </h3>
+		<h3 style="width: 350px; text-align: center; color: white;">가난한 자취생이지만 부모님께 걱정을 끼치고 싶지 않을 때!
+
+			집 곳곳의 페브릭 등에 몇 번
+			뿌려만 주변 아 내새끼가 밥은
+			잘 챙겨먹는구나! 바로
+			안심하실 거랍니다!</h3>
+		<h3 style="width: 350px; text-align: center; color: white;">평소에 먹방을 즐겨보는 당신!
+			이 향수를 뿌리며 고기 먹방을
+			본다면 그것이 바로 4D입니다!
+			
+			단, 갑자기 나도 삼겹살을 시켜먹고 싶어질 수 있으니 주의
+			바래요!</h3>
+	</div>
+  </section>
+  <section style="text-align: center;">
+	<h1 style="padding-bottom: 50px;">FAQ</h1>
+	<img src="qna.png" width="50%">
+  </section>
+  <div class="fixed"><img src="component.png"></div>
+  <footer style="background: gray; padding: 50px; padding-left: 250px; padding-bottom: 100px;">
+<h4>(주)피디지아틀리에
+<br>대표자:최민석 &nbsp; H.P:010-1234-5678
+<br>대표전화: 010-1234-5678 &nbsp; 팩스: 02-123-5678
+<br>이메일: scndone@naver.com
+<br>(01811)서울시 노원구 공릉로 232
+서울과학기술대학교</h4>
+  </footer>
+</body>
+</html>
